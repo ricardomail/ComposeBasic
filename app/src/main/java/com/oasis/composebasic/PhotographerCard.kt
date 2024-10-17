@@ -41,6 +41,8 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
+import androidx.constraintlayout.compose.ConstraintLayout
+import androidx.constraintlayout.compose.Dimension
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
@@ -191,5 +193,41 @@ fun MyOwnColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) 
                 yPosition += it.height
             }
         }
+    }
+}
+
+/**
+ * 约束布局
+ */
+@Composable
+fun ConstraintLayoutContent() {
+    ConstraintLayout {
+        val (button, text) = createRefs() // 创建引用
+        // 关联引用
+        Button(onClick = {}, modifier = Modifier.constrainAs(button){
+            top.linkTo(parent.top, margin = 16.dp) // 使用约束
+        }) {
+            Text("button")
+        }
+
+        Text("Hello", modifier = Modifier.constrainAs(text){
+            top.linkTo(button.bottom, margin = 16.dp)
+            centerHorizontallyTo(parent)
+        })
+    }
+}
+
+@Composable
+fun ConstraintLayoutContent3() {
+    ConstraintLayout {
+        val text = createRef() // 创建引用
+        val guideline = createGuidelineFromStart(fraction = 0.5f) // 引导线
+        Text(
+            text = "lakjdflkajdlkfjaldfjalsdjflajdlfjalkdjflkajdslfjalskdjflkaf",
+            modifier = Modifier.constrainAs(text) {
+                linkTo(start = guideline, end = parent.end)
+                width = Dimension.preferredWrapContent
+            }
+        )
     }
 }

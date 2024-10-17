@@ -49,12 +49,13 @@ class MainActivity : ComponentActivity() {
 //                SimpleColumn()
 //                ScrollingList()
 //                TextWithPaddingToBaseline()
-                MyOwnColumn(Modifier.padding(100.dp)){
-                    Text(text = "1231231232")
-                    Text(text = "1231231232")
-                    Text(text = "1231231232")
-                    Text(text = "1231231232")
-                }
+//                MyOwnColumn(Modifier.padding(100.dp)){
+//                    Text(text = "1231231232")
+//                    Text(text = "1231231232")
+//                    Text(text = "1231231232")
+//                    Text(text = "1231231232")}
+                ConstraintLayoutContent3()
+
             }
         }
     }
