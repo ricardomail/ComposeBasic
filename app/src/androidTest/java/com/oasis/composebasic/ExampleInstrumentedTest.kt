@@ -22,3 +22,8 @@ class ExampleInstrumentedTest {
         assertEquals("com.oasis.composebasic", appContext.packageName)
     }
 }
+
+
+class ExplicitTest{
+
+}

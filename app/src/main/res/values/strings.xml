@@ -2,4 +2,5 @@
     <string name="app_name">ComposeBasic</string>
     <string name="title_activity_anima">AnimaActivity</string>
     <string name="title_activity_todo">TodoActivity</string>
+    <string name="text">这是一个从String.xml里来的文本</string>
 </resources>

@@ -34,6 +34,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import com.oasis.composebasic.component.IconSample
+import com.oasis.composebasic.component.SwitchSample
+import com.oasis.composebasic.component.TextFieldSample
+import com.oasis.composebasic.component.TextSample
+import com.oasis.composebasic.component.TextSample2
+import com.oasis.composebasic.samples.CompositionSample1
+import com.oasis.composebasic.samples.CompositionSample3
 import com.oasis.composebasic.ui.theme.ComposeBasicTheme
 
 /**
@@ -54,8 +61,10 @@ class MainActivity : ComponentActivity() {
 //                    Text(text = "1231231232")
 //                    Text(text = "1231231232")
 //                    Text(text = "1231231232")}
-                ConstraintLayoutContent3()
-
+//                ConstraintLayoutContent3()
+//                CompositionSample3()
+//                IconSample()
+                TextFieldSample()
             }
         }
     }
