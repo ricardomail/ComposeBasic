@@ -6,6 +6,7 @@ import android.provider.MediaStore.Images
 import android.view.Display.Mode
 import android.widget.Space
 import androidx.activity.ComponentActivity
+import androidx.activity.OnBackPressedDispatcher
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
@@ -34,7 +35,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.oasis.composebasic.component.DisposableEffectSample
+import com.oasis.composebasic.component.Example
 import com.oasis.composebasic.component.IconSample
+import com.oasis.composebasic.component.LazyColumnSample
+import com.oasis.composebasic.component.ListItemSample
 import com.oasis.composebasic.component.SwitchSample
 import com.oasis.composebasic.component.TextFieldSample
 import com.oasis.composebasic.component.TextSample
@@ -64,7 +71,11 @@ class MainActivity : ComponentActivity() {
 //                ConstraintLayoutContent3()
 //                CompositionSample3()
 //                IconSample()
-                TextFieldSample()
+                val mutableLiveData: MutableLiveData<String> = MutableLiveData<String>("hello")
+                Example()
+//                Thread.sleep(2000)
+//                mutableLiveData.value = "123"
+
             }
         }
     }
